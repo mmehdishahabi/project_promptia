@@ -15,7 +15,6 @@ const handler = NextAuth({
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
     }),
   ],
-  secret: process.env.NextAuth_SECRET,
   callbacks: {
     async session({ session }) {
       // store the user id from MongoDB to session
